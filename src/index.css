@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-white text-stone-900 font-sans antialiased;
+  }
+
+  button,
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply rounded-xl bg-gradient-to-l from-stone-100 via-stone-50 to-stone-100 bg-[length:200%_100%] animate-shimmer;
+  }
+}
